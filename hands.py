@@ -1,4 +1,4 @@
-import cv2
+from cv2 import cv2
 import mediapipe as mp
 from output_handler import OutputHandler
 mp_drawing = mp.solutions.drawing_utils

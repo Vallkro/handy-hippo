@@ -28,6 +28,7 @@ class OutputHandler():
 
     def __init__(self):
         self.name = "Output handler"
+        # TODO : make a config file
         self.previous_coords = None
         self.tol = 0.002
         self.tol_upper = 0.01
@@ -35,7 +36,7 @@ class OutputHandler():
         self.mouse = Controller()
         self.step_size = 2
         self.P = 1000
-        self.ra = RollingAvg(steps = 5, states = 9)
+        self.ra = RollingAvg(steps = 10, states = 9)
         self.button_left_down = False
     def indexscroll(self, coords):
     
