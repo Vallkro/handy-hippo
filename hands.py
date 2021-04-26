@@ -33,7 +33,9 @@ with mp_hands.Hands(
                 mp_drawing.draw_landmarks(
                     image, hand_landmarks, mp_hands.HAND_CONNECTIONS)
                 index_finger_coords = hand_landmarks.landmark[mp_hands.HandLandmark.INDEX_FINGER_TIP]
-                oh.indexscroll(index_finger_coords)
+                thumb_finger_coords = hand_landmarks.landmark[mp_hands.HandLandmark.THUMB_TIP]
+                #oh.indexscroll(index_finger_coords)
+                oh.mouse_control(thumb_finger_coords, index_finger_coords)
 
         cv2.imshow('MediaPipe Hands', image)
         if cv2.waitKey(5) & 0xFF == 27:
